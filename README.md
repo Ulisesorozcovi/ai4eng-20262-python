@@ -26,8 +26,9 @@ El proyecto se organiza siguiendo una jerarquía estricta para separar la lógic
 │   └── question-0004-usecase-generator.py
 ├── myanswers/                  # Se desarrollara en la Fase 2
 └── README.md                   # Documentación principal
-
+```
 ---
+
 ## 🛠️ Descripción de los Módulos
 
 1. Generación de Datos (Fase 1)
@@ -40,16 +41,17 @@ En esta fase se han cubierto las siguientes técnicas críticas:
 - Escalado: Implementación de StandardScaler, MinMaxScaler y RobustScaler (especialmente útil para datos con outliers).
 
 ---
+
 ## 🚀 Requisitos y Ejecución
 
 Para ejecutar los generadores y visualizar los casos de prueba, asegúrese de tener instaladas las siguientes librerías:
 
 ```bash
 pip install pandas numpy scikit-learn
-
+```
 Para probar un generador específico, ejecute:
 
 ```bash
 python myquestions/question-0001-usecase-generator.py
-
+```
 Nota de Desarrollo: Todos los scripts han sido diseñados bajo principios de programación funcional y tipado estático (typing) para garantizar la robustez del código.
