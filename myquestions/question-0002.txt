@@ -1,0 +1,18 @@
+Problema: Predicción del Índice de Calidad del Aire (ICA)
+Contexto:
+Una red de sensores distribuidos en una ciudad industrial registra niveles de material particulado ($PM_{2.5}$), Dióxido de Nitrógeno ($NO_2$) y Ozono ($O_3$). El Ministerio de Ambiente necesita automatizar el procesamiento de estos datos para alimentar un modelo de Random Forest que prediga si el aire es "Seguro" o "Peligroso".
+Debido a fallos en la conexión de los sensores, hay muchos datos faltantes, y las unidades de medida varían drásticamente entre gases, lo que requiere un tratamiento estadístico riguroso.
+Tu Misión:
+Desarrollar una solución lógica en Python que tome los datos crudos de los sensores y los transforme en matrices numéricas listas para el entrenamiento de modelos de inteligencia artificial.
+Especificaciones de la Función:
+La función debe llamarse preparar_datos y debe operar sobre los siguientes parámetros:
+•	df: Un pd.DataFrame con lecturas de sensores (numéricas) y una etiqueta de clasificación.
+•	target_col: Un str que indica la columna objetivo (ej. 'estado_aire').
+Operaciones internas requeridas:
+1.	Imputación de Sensores: Dado que los niveles de contaminación cambian gradualmente, debes rellenar los nulos (NaN) de las variables predictoras usando la mediana de cada columna mediante SimpleImputer.
+2.	Escalado de Rangos: Las concentraciones de $NO_2$ y $PM_{2.5}$ tienen escalas diferentes. Debes normalizar todas las características (X) al rango $[0, 1]$ utilizando MinMaxScaler de sklearn.
+3.	Extracción de Matrices: Separar el DataFrame procesado en la matriz de diseño y el vector de etiquetas.
+Retorno de la Función:
+La función debe devolver una tupla con dos elementos:
+1.	X: Un numpy.ndarray con las características escaladas e imputadas.
+2.	y: Un pd.Series o numpy.ndarray con la columna objetivo original.

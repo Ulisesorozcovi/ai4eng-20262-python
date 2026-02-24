@@ -1,0 +1,16 @@
+Problema: Predicción del Tiempo de Estancia de Buques (Port Throughput)
+Contexto: En un puerto de contenedores de alto tráfico, la eficiencia se mide por el "Turnaround Time" (tiempo total desde que un buque llega a la zona de fondeo hasta que zarpa). Un retraso de 2 horas puede costar miles de dólares. Tu misión es preparar los datos históricos de operaciones para alimentar un modelo de Gradient Boosting que prediga el tiempo de estancia basado en la carga y los recursos asignados.
+Tu Misión:
+Desarrollar una función en Python que limpie las métricas operativas del puerto. Los datos suelen tener valores faltantes cuando los sensores de las grúas fallan y requieren un escalado que mantenga la relación de magnitud entre diferentes tipos de carga.
+Especificaciones de la Función:
+La función debe llamarse preparar_datos y debe operar sobre los siguientes parámetros:
+•	df: Un pd.DataFrame con columnas como ['tonelaje_total', 'numero_gruas', 'teus_capacidad', 'clima_viento'].
+•	target_col: Un str que indica la columna del tiempo de estancia (ej. horas_en_puerto).
+Operaciones internas requeridas:
+1.	Imputación de Operaciones: Rellenar los valores nulos (NaN) en las variables de operación usando la media mediante SimpleImputer.
+2.	Normalización: Para que el número de grúas (valor pequeño) no sea ignorado frente al tonelaje (valor grande), debes usar StandardScaler de sklearn para que todas las variables tengan media 0 y varianza 1.
+3.	Extracción de Matrices: Separar el dataset en la matriz de diseño X y el vector de etiquetas y.
+Retorno de la Función:
+La función debe devolver una tupla con dos elementos:
+1.	X: Un numpy.ndarray con las características procesadas.
+2.	y: Un pd.Series o numpy.ndarray con la columna objetivo original.

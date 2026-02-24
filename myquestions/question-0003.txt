@@ -1,0 +1,16 @@
+Problema: Clasificación de Masas de Agua (Oceanografía Física)
+Contexto: Los oceanógrafos utilizan sensores CTD (Conductivity, Temperature, Depth) para identificar diferentes "masas de agua" en el océano profundo. Cada masa de agua tiene una firma única de salinidad y temperatura. Tu misión es preparar los datos de un crucero oceanográfico para un modelo de Clustering (K-Means) que identifique automáticamente si una muestra pertenece a "Agua Intermedia del Antártico", "Agua Profunda del Atlántico Norte", etc.
+Tu Misión:
+Desarrollar una función en Python que limpie y estandarice los datos oceanográficos. En este dominio, los valores extremos son comunes debido a errores de sensor en altas presiones, por lo que usaremos una técnica de escalado más robusta.
+Especificaciones de la Función:
+La función debe llamarse preparar_datos y debe operar sobre los siguientes parámetros:
+•	df: Un pd.DataFrame con columnas como ['temperatura', 'salinidad', 'oxigeno_disuelto', 'presion'].
+•	target_col: Un str que indica la columna de la masa de agua (etiqueta).
+Operaciones internas requeridas:
+1.	Limpieza de Valores Extremos: Los sensores a veces marcan valores imposibles. Debes reemplazar cualquier valor nulo (NaN) en las columnas de características usando la media mediante SimpleImputer.
+2.	Escalado Robusto: Debido a que las corrientes marinas pueden generar valores atípicos reales, debes usar RobustScaler de sklearn. Este escalador es ideal en oceanografía porque utiliza el rango intercuartílico, evitando que los valores extremos distorsionen la escala.
+3.	Preparación de Tensores: Separar el resultado en la matriz de características y el vector objetivo.
+Retorno de la Función:
+La función debe devolver una tupla con dos elementos:
+1.	X: Un numpy.ndarray con las características transformadas (Robust Scaled).
+2.	y: Un pd.Series o numpy.ndarray con la columna objetivo original.
