@@ -4,7 +4,7 @@ from sklearn.impute import SimpleImputer
 from sklearn.preprocessing import MinMaxScaler
 from typing import Tuple, Dict, Any
 
-def generar_caso_de_uso_preparar_datos() -> Tuple[Dict[str, Any], Tuple[np.ndarray, np.ndarray]]:
+def generar_caso_de_uso_calidad_aire() -> Tuple[Dict[str, Any], Tuple[np.ndarray, np.ndarray]]:
     """
     Genera un caso de uso aleatorio para la función preparar_datos en un contexto ambiental.
     
@@ -56,7 +56,7 @@ def generar_caso_de_uso_preparar_datos() -> Tuple[Dict[str, Any], Tuple[np.ndarr
 # --- EJEMPLO DE USO ---
 if __name__ == "__main__":
     # Generar el par entrada/salida
-    entrada, salida_esperada = generar_caso_de_uso_preparar_datos()
+    entrada, salida_esperada = generar_caso_de_uso_calidad_aire()
     
     print("🚀 NUEVO CASO DE PRUEBA GENERADO")
     print("\n[INPUT] DataFrame Original (con nulos):")

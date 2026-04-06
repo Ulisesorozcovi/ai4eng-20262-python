@@ -4,7 +4,7 @@ from sklearn.impute import SimpleImputer
 from sklearn.preprocessing import RobustScaler
 from typing import Tuple, Dict, Any
 
-def generar_caso_de_uso_preparar_datos() -> Tuple[Dict[str, Any], Tuple[np.ndarray, np.ndarray]]:
+def generar_caso_de_uso_masas_agua() -> Tuple[Dict[str, Any], Tuple[np.ndarray, np.ndarray]]:
     """
     Genera un caso de uso aleatorio para datos de sensores oceanográficos.
     
@@ -58,7 +58,7 @@ def generar_caso_de_uso_preparar_datos() -> Tuple[Dict[str, Any], Tuple[np.ndarr
 
 # --- EJEMPLO DE USO ---
 if __name__ == "__main__":
-    input_dict, output_tuple = generar_caso_de_uso_preparar_datos()
+    input_dict, output_tuple = generar_caso_de_uso_masas_agua()
     
     print("🌊 CASO DE USO OCEANOGRÁFICO GENERADO")
     print("\n[INPUT] Primeras filas del DataFrame (con posibles nulos y outliers):")

@@ -4,7 +4,7 @@ from sklearn.impute import SimpleImputer
 from sklearn.preprocessing import StandardScaler
 from typing import Tuple, Dict, Any
 
-def generar_caso_de_uso_preparar_datos() -> Tuple[Dict[str, Any], Tuple[np.ndarray, np.ndarray]]:
+def generar_caso_de_uso_buques() -> Tuple[Dict[str, Any], Tuple[np.ndarray, np.ndarray]]:
     """
     Genera un caso de uso aleatorio para la gestión de logística portuaria.
     
@@ -56,7 +56,7 @@ def generar_caso_de_uso_preparar_datos() -> Tuple[Dict[str, Any], Tuple[np.ndarr
 # --- EJEMPLO DE USO Y VISUALIZACIÓN ---
 if __name__ == "__main__":
     # Generamos el caso
-    entrada_puerto, salida_esperada = generar_caso_de_uso_preparar_datos()
+    entrada_puerto, salida_esperada = generar_caso_de_uso_buques()
     
     print("🚢 GENERADOR DE LOGÍSTICA PORTUARIA ACTIVADO")
     print("-" * 50)

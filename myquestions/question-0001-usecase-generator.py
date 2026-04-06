@@ -4,7 +4,7 @@ from sklearn.impute import SimpleImputer
 from sklearn.preprocessing import StandardScaler
 from typing import Tuple, Dict, Any
 
-def generar_caso_de_uso_preparar_datos() -> Tuple[Dict[str, Any], Tuple[np.ndarray, np.ndarray]]:
+def generar_caso_de_uso_medico() -> Tuple[Dict[str, Any], Tuple[np.ndarray, np.ndarray]]:
     """
     Genera un caso de uso aleatorio para la función preparar_datos.
     
@@ -56,7 +56,7 @@ def generar_caso_de_uso_preparar_datos() -> Tuple[Dict[str, Any], Tuple[np.ndarr
 
 # Ejemplo de uso:
 # 1. Ejecutar el generador para obtener un caso de prueba
-input_dict, output_tuple = generar_caso_de_uso_preparar_datos()
+input_dict, output_tuple = generar_caso_de_uso_medico()
 
 # 2. Desempaquetar los datos para inspección
 df_entrada = input_dict['df']
