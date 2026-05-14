@@ -1,3 +1,11 @@
-Las soluciones implementadas para cada una de las preguntas 0138, 0288, 0452 y 0622 fueron diseñadas y ejecutadas de manera efectiva.
+En la pregunta 0452:
 
-Para ello se hizo siguiendo directamente la lógica esperada por los generadores de casos de uso. No se identificaron discrepancias de precisión o errores que deriven algo adicional.
+La solución implementada en answer-0452.py define la función analizar_correlacion_rangos(df), la cual retorna df.corr(method="spearman"), tal como solicita el enunciado.
+
+Sin embargo, al ejecutar el validador se presenta un error en el generador de casos de uso antes de evaluar la solución:
+
+analizar_correlacion_rangos() missing 1 required positional argument: 'df'
+
+El problema ocurre porque el archivo question-0452-usecase-generator.py define primero una función llamada analizar_correlacion_rangos(df) y después define la función generar_caso_de_uso_analizar_correlacion_rangos(). El validador selecciona la primera función encontrada en el archivo generador y la ejecuta sin argumentos, por lo que intenta llamar analizar_correlacion_rangos() sin pasarle el DataFrame requerido.
+
+Por esta razón, el fallo corresponde al generador de casos de uso de la pregunta 0452 y no a la solución answer-0452.py. La función generadora correcta sí existe en el archivo, pero no es la primera función definida.
