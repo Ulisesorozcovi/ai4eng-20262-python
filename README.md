@@ -1,4 +1,6 @@
-# Modelos y simulacion 1 / 2026-2 - Fase 1: Generación de Casos de Uso
+# Modelos y simulacion 1 / 2026-2 
+
+## Programación con LLMs
 
 Este repositorio contiene la entrega de la **Fase 1** y la **Fase 2** para el curso de Inteligencia Artificial aplicada a la Ingeniería. El objetivo principal es el diseño de problemas técnicos y la implementación de generadores de datos sintéticos para validar algoritmos de preprocesamiento.
 
@@ -6,7 +8,7 @@ Este repositorio contiene la entrega de la **Fase 1** y la **Fase 2** para el cu
 * **Nombre:** Ulises Orozco Villegas
 * **Correo Institucional:** Ulises.orozco@udea.edu.co
 * **Institución:** Universidad de Antioquia
-
+* **Sede:** Turbo, Antioquia
 ---
 
 ## 📂 Estructura del Repositorio
